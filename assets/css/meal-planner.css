@@ -1,0 +1,420 @@
+/* 
+ * assets/css/meal-planner.css
+ * CSS for the meal planner template
+ */
+
+.mkr-meal-planner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mkr-page-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mkr-login-prompt {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.mkr-planner-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.mkr-date-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mkr-current-week {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.mkr-planner-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.mkr-weekly-planner {
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.mkr-meal-planner-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.mkr-meal-planner-table th,
+.mkr-meal-planner-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    vertical-align: top;
+}
+
+.mkr-meal-time-header {
+    width: 120px;
+    text-align: right;
+    background-color: #f8f9fa;
+}
+
+.mkr-day-header {
+    text-align: center;
+    background-color: #f8f9fa;
+    min-width: 120px;
+}
+
+.mkr-day-name {
+    font-weight: bold;
+}
+
+.mkr-day-num {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.mkr-meal-time {
+    text-align: right;
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+.mkr-meal-cell {
+    min-height: 100px;
+    transition: background-color 0.2s;
+}
+
+.mkr-today {
+    background-color: var(--primary-light);
+}
+
+.mkr-drop-hover {
+    background-color: rgba(0, 115, 170, 0.1);
+}
+
+.mkr-meal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mkr-meal-content {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mkr-meal-link {
+    margin-left: 5px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.mkr-remove-meal {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0;
+    margin-left: 5px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.mkr-remove-meal:hover {
+    opacity: 1;
+}
+
+.mkr-add-meal {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: transparent;
+    border: 1px dashed var(--border-color);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mkr-add-meal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+}
+
+.mkr-recipe-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.mkr-recipe-search,
+.mkr-recipe-suggestions {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.mkr-recipe-search h2,
+.mkr-recipe-suggestions h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.mkr-search-form {
+    margin-bottom: 20px;
+}
+
+#mkr-recipe-search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.mkr-search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.mkr-search-filters select {
+    flex: 1;
+    min-width: 120px;
+}
+
+.mkr-recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.mkr-recipe-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: white;
+    overflow: hidden;
+    cursor: move;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mkr-recipe-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mkr-recipe-card-content {
+    padding: 15px;
+}
+
+.mkr-recipe-title {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+.mkr-recipe-meta {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.mkr-recipe-actions {
+    text-align: right;
+}
+
+.mkr-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.mkr-suggestion-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.mkr-meal-type-filter {
+    white-space: nowrap;
+}
+
+.mkr-meal-type-filter.mkr-active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.mkr-loading {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.mkr-error,
+.mkr-no-results {
+    padding: 20px;
+    text-align: center;
+    color: var(--danger-color);
+}
+
+.mkr-notifications {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 300px;
+}
+
+.mkr-notification {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: mkr-fade-in 0.3s ease-out;
+}
+
+.mkr-notification-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.mkr-notification-error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.mkr-notification-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.mkr-notification-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.mkr-close-notification {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0;
+    margin-left: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.mkr-close-notification:hover {
+    opacity: 1;
+}
+
+.mkr-fade-out {
+    animation: mkr-fade-out 0.3s ease-out forwards;
+}
+
+@keyframes mkr-fade-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mkr-fade-out {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+}
+
+.mkr-button-small {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .mkr-recipe-selection {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mkr-planner-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .mkr-date-navigation {
+        justify-content: space-between;
+    }
+    
+    .mkr-planner-actions {
+        justify-content: center;
+    }
+    
+    .mkr-meal-time-header,
+    .mkr-meal-time {
+        width: auto;
+        text-align: left;
+    }
+}
+
+/* Print styles */
+@media print {
+    .mkr-login-prompt,
+    .mkr-planner-actions,
+    .mkr-recipe-selection,
+    .mkr-add-meal,
+    .mkr-remove-meal,
+    .mkr-meal-link,
+    .mkr-notifications {
+        display: none !important;
+    }
+    
+    .mkr-meal-planner-container {
+        padding: 0;
+    }
+    
+    .mkr-meal-planner-table {
+        width: 100%;
+        page-break-inside: avoid;
+    }
+    
+    .mkr-meal-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .mkr-today {
+        background-color: #f8f8f8;
+    }
+}

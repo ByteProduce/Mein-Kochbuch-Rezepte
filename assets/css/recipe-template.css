@@ -1,0 +1,118 @@
+/* 
+ * assets/css/recipe-template.css
+ * CSS for the recipe template page
+ */
+
+.mkr-recipe-page-wrapper {
+    padding: 2rem 0;
+}
+
+.mkr-breadcrumbs {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.mkr-breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.mkr-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.mkr-no-recipe {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.mkr-recommendations {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.mkr-recommendations h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mkr-recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.mkr-recommendation-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mkr-recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.mkr-recommendation-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.mkr-recommendation-image {
+    height: 180px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.mkr-recommendation-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.mkr-recommendation-card:hover .mkr-recommendation-thumbnail {
+    transform: scale(1.05);
+}
+
+.mkr-recommendation-title {
+    padding: 0.75rem;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.mkr-recommendation-meta {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 0.75rem 0.75rem;
+}
+
+.mkr-cuisine-tag,
+.mkr-difficulty-tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    color: var(--text-light);
+}
+
+.mkr-cuisine-tag {
+    background-color: var(--primary-color);
+}
+
+.mkr-difficulty-tag {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .mkr-recommendations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
