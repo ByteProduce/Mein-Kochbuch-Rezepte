@@ -1,0 +1,122 @@
+# Mein Kochbuch Rezepte Plugin Translations
+# Copyright (C) 2024 
+# This file is distributed under the same license as the Mein Kochbuch Rezepte package.
+msgid ""
+msgstr ""
+"Project-Version: 3.7.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mein-kochbuch-rezepte\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-03-24 12:00+0100\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+
+# General Plugin Labels
+msgid "Mein Kochbuch Rezepte"
+msgstr "My Cookbook Recipes"
+
+msgid "Recipe Management Plugin"
+msgstr "Recipe Management Plugin"
+
+# Menus and Page Titles
+msgid "Rezepte"
+msgstr "Recipes"
+
+msgid "Neue Rezepte"
+msgstr "New Recipes"
+
+msgid "Rezept hinzufügen"
+msgstr "Add Recipe"
+
+msgid "Zutaten"
+msgstr "Ingredients"
+
+msgid "Utensilien"
+msgstr "Utensils"
+
+# Form Labels
+msgid "Rezepttitel"
+msgstr "Recipe Title"
+
+msgid "Beschreibung"
+msgstr "Description"
+
+msgid "Zubereitungszeit"
+msgstr "Preparation Time"
+
+msgid "Portionen"
+msgstr "Servings"
+
+# Error Messages
+msgid "Fehler beim Speichern des Rezepts"
+msgstr "Error saving recipe"
+
+msgid "Keine Rezepte gefunden"
+msgstr "No recipes found"
+
+# Frontend Translations
+msgid "Zutaten"
+msgstr "Ingredients"
+
+msgid "Zubereitung"
+msgstr "Instructions"
+
+msgid "Drucken"
+msgstr "Print"
+
+msgid "Teilen"
+msgstr "Share"
+
+msgid "Zur Einkaufsliste hinzufügen"
+msgstr "Add to Shopping List"
+
+# Filters and Search
+msgid "Suchen"
+msgstr "Search"
+
+msgid "Schwierigkeitsgrad"
+msgstr "Difficulty Level"
+
+msgid "Diät"
+msgstr "Diet"
+
+msgid "Küchenart"
+msgstr "Cuisine"
+
+# Shopping List
+msgid "Einkaufsliste"
+msgstr "Shopping List"
+
+msgid "Liste leeren"
+msgstr "Clear List"
+
+msgid "Als PDF exportieren"
+msgstr "Export as PDF"
+
+# Meal Planner
+msgid "Mahlzeitenplaner"
+msgstr "Meal Planner"
+
+msgid "Woche"
+msgstr "Week"
+
+msgid "Heute"
+msgstr "Today"
+
+# Nutritional Values
+msgid "Nährwerte"
+msgstr "Nutritional Values"
+
+msgid "Kalorien"
+msgstr "Calories"
+
+msgid "Proteine"
+msgstr "Proteins"
+
+msgid "Kohlenhydrate"
+msgstr "Carbohydrates"
+
+msgid "Fette"
+msgstr "Fats"
