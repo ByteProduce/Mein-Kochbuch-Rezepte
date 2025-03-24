@@ -1,0 +1,38 @@
+/**
+ * Styles für die Video-Anzeige im Frontend
+ * Mein Kochbuch Rezepte Plugin
+ */
+
+.mkr-video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.mkr-video-container iframe,
+.mkr-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mkr-error {
+    padding: 15px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+/* Dark Mode Anpassungen */
+body.dark .mkr-error {
+    background-color: #391418;
+    color: #ffc7cb;
+    border-color: #682029;
+}
