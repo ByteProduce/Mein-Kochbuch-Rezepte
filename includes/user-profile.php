@@ -9,6 +9,17 @@ if (!defined('ABSPATH')) {
 }
 
 /**
+ * Enqueue CSS for user profile features
+ */
+function mkr_enqueue_user_profile_assets() {
+    // Only enqueue on frontend
+    if (!is_admin()) {
+        wp_enqueue_style('mkr-user-profile', MKR_PLUGIN_URL . 'assets/css/user-profile.css', array(), MKR_VERSION);
+    }
+}
+add_action('wp_enqueue_scripts', 'mkr_enqueue_user_profile_assets');
+
+/**
  * Benutzerprofil-Felder zum Profilformular hinzufügen
  *
  * @param WP_User $user Benutzer-Objekt
@@ -529,106 +540,6 @@ function mkr_favorite_recipes_shortcode($atts) {
         });
     });
     </script>
-    
-    <style>
-    .mkr-favorite-recipes {
-        margin-bottom: 30px;
-    }
-    
-    .mkr-recipe-grid {
-        display: grid;
-        grid-template-columns: repeat(<?php echo esc_attr($columns); ?>, 1fr);
-        gap: 20px;
-    }
-    
-    .mkr-recipe-card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        position: relative;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    }
-    
-    .mkr-recipe-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .mkr-recipe-card-link {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    .mkr-recipe-card-image {
-        height: 180px;
-        overflow: hidden;
-    }
-    
-    .mkr-recipe-thumbnail {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .mkr-recipe-card:hover .mkr-recipe-thumbnail {
-        transform: scale(1.05);
-    }
-    
-    .mkr-recipe-card-content {
-        padding: 15px;
-    }
-    
-    .mkr-recipe-title {
-        margin: 0 0 10px 0;
-        font-size: 1.1rem;
-    }
-    
-    .mkr-recipe-meta {
-        display: flex;
-        gap: 15px;
-        font-size: 0.9rem;
-        color: #666;
-    }
-    
-    .mkr-remove-from-favorites {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: rgba(255, 255, 255, 0.8);
-        border: none;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        transition: opacity 0.2s ease-in-out;
-    }
-    
-    .mkr-recipe-card:hover .mkr-remove-from-favorites {
-        opacity: 1;
-    }
-    
-    @media (max-width: 768px) {
-        .mkr-recipe-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .mkr-remove-from-favorites {
-            opacity: 1;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .mkr-recipe-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-    </style>
     <?php
     
     return ob_get_clean();
@@ -719,49 +630,6 @@ function mkr_add_favorite_button() {
     });
     </script>
     <?php endif; ?>
-    
-    <style>
-    .mkr-favorite-button-container {
-        margin: 20px 0;
-        text-align: center;
-    }
-    
-    .mkr-favorite-button {
-        display: inline-flex;
-        align-items: center;
-        padding: 8px 16px;
-        background-color: #f8f8f8;
-        border: 1px solid #ddd;
-        border-radius: 30px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: all 0.2s ease-in-out;
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    .mkr-favorite-button:hover {
-        background-color: #f0f0f0;
-        color: inherit;
-    }
-    
-    .mkr-favorite-button.mkr-is-favorite {
-        background-color: #ffebee;
-        border-color: #ffcdd2;
-    }
-    
-    .mkr-favorite-icon {
-        font-size: 18px;
-        margin-right: 8px;
-    }
-    
-    @media (max-width: 768px) {
-        .mkr-favorite-button {
-            width: 100%;
-            justify-content: center;
-        }
-    }
-    </style>
     <?php
 }
 add_action('mkr_after_recipe_title', 'mkr_add_favorite_button');
